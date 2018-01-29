@@ -1,0 +1,80 @@
+$color1: #F0B27A;
+$color2: #5DADE2;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .pysakit {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    .pysakki {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+
+
+      height: 100%;
+      padding: 1em;
+      margin: 1em;
+
+      border-radius: 4px;
+      background-color: #DC7633;
+      color: #F4F6F6;
+
+      .reitit {
+        display: flex;
+        flex-direction: column;
+
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        .reitti {
+
+          margin: 0.5em;
+          padding: 1em;
+
+          background-color: #F4F6F6;
+          color: #DC7633;
+          border-radius: 4px;
+          transition-duration: 0.33s;
+
+
+          &:hover {
+            background-color: #dcdede;
+          }
+
+          a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            text-decoration: none;
+            color: #DC7633;
+
+            p {
+              font-size: 55%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .otsikko {
+    padding: 1em;
+    margin: 0;
+  }
+}

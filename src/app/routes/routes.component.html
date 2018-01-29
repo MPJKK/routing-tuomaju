@@ -1,0 +1,14 @@
+<h1 class="otsikko">Reittejä</h1>
+<ul class="pysakit">
+    <li *ngFor="let dosari of haku" class="pysakki">
+        <h1 class="dosariNimi">{{ dosari.name }}</h1>
+        <ul class="reitit">
+            <li *ngFor="let reitti of dosari.patterns" class="reitti">
+                <a href="https://maps.google.fi/maps/place/{{this.lat}}+{{this.lon}}">
+                    <h3>{{ reitti.route.shortName }}</h3>
+                    <p>{{ reitti.route.longName }}</p>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>

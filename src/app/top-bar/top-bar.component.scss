@@ -1,0 +1,47 @@
+
+:host {
+  width: 100%;
+
+
+  nav {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #DC7633;
+    color:#F4F6F6;
+
+    border-radius: 0 0 4px 4px;
+
+    ul {
+      display: flex;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+
+      li {
+        margin: 0 1em 1em 1em;
+
+        border-bottom: ridge 4px transparent;
+        transition-duration: 0.15s;
+
+        &:hover {
+          border-bottom: dotted 4px #F4F6F6;
+        }
+
+        a {
+          text-decoration: none;
+          color:#F4F6F6;
+        }
+      }
+    }
+  }
+}
