@@ -13,6 +13,7 @@ import {FormsModule} from '@angular/forms';
 import { MapsComponent } from './maps/maps.component';
 import {AgmCoreModule} from '@agm/core';
 import { DirectionPipe } from './pipes/direction.pipe';
+import { DestinationPipe } from './pipes/destination.pipe';
 
 
 
@@ -23,7 +24,8 @@ import { DirectionPipe } from './pipes/direction.pipe';
         SetupComponent,
         RoutesComponent,
         MapsComponent,
-        DirectionPipe
+        DirectionPipe,
+        DestinationPipe
     ],
     imports: [
         BrowserModule,

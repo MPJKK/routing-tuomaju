@@ -7,7 +7,7 @@
                 <a [routerLink]="['../map']">
                     <h3>{{ reitti.route.shortName }}</h3>
                     <p [class]="reitti.directionId | direction">{{ reitti.directionId | direction }} </p>
-                    <p class="longName">{{ reitti.route.longName }}</p>
+                    <p class="longName">{{ reitti.route.longName | destination }}</p>
                 </a>
             </li>
         </ul>
