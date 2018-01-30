@@ -11,6 +11,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {DigitransitService} from './services/digitransit.service';
 import {FormsModule} from '@angular/forms';
 import { MapsComponent } from './maps/maps.component';
+import {AgmCoreModule} from '@agm/core';
+import { DirectionPipe } from './pipes/direction.pipe';
+
 
 
 @NgModule({
@@ -19,13 +22,15 @@ import { MapsComponent } from './maps/maps.component';
         TopBarComponent,
         SetupComponent,
         RoutesComponent,
-        MapsComponent
+        MapsComponent,
+        DirectionPipe
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        FormsModule
+        FormsModule,
+        AgmCoreModule.forRoot({apiKey: 'AIzaSyDzzlp5j3dGrt5r9hDoHdoFhMnTXZ8YBBg'})
     ],
     providers: [DigitransitService],
     bootstrap: [AppComponent]

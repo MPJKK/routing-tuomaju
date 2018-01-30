@@ -14,8 +14,6 @@ export class RoutesComponent implements OnInit {
 
     haku: any;
 
-    lat: number;
-    lon: number;
 
     ngOnInit() {
         this.setRoutes();
@@ -25,11 +23,8 @@ export class RoutesComponent implements OnInit {
     setRoutes() {
         this.digitransitService.getRoutes().subscribe(response => {
             this.haku = response.data['stops'];
-            this.lat = response.data['stops'][0].lat;
-
-            this.lon = response.data['stops'][0].lon;
-
-            console.log(this.lat , this.lon);
+            this.digitransitService.setLatLng(response.data['stops'][0].lat, response.data['stops'][0].lon);
+            this.digitransitService.setName(response.data['stops'][0].name);
 
         });
     }

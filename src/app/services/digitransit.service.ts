@@ -6,7 +6,13 @@ export class DigitransitService {
 
     digitransitUrl = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql ';
 
-    routeSearch = 'käenkuja';
+    routeSearch = 'Gransinmäki';
+
+    googleApiKey = 'AIzaSyDzzlp5j3dGrt5r9hDoHdoFhMnTXZ8YBBg';
+
+    mapLat = 60.1849;
+    mapLng = 24.96053;
+    pysakkiName = 'Gransinmäki';
 
     constructor(private http: HttpClient) {
     }
@@ -25,7 +31,7 @@ export class DigitransitService {
                     longName
                     mode
                   }
-                 directionId
+                  directionId
                 }
               }
             }`;
@@ -39,6 +45,15 @@ export class DigitransitService {
         }
 
         return this.http.post<ReittiData>(this.digitransitUrl, body, headers);
+    }
+
+    setLatLng(lat, lng) {
+        this.mapLat = lat;
+        this.mapLng = lng;
+    }
+
+    setName(name) {
+        this.pysakkiName = name;
     }
 
 }

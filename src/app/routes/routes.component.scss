@@ -14,6 +14,7 @@ $color2: #5DADE2;
     margin: 0;
     padding: 0;
 
+
     list-style: none;
 
     .pysakki {
@@ -21,8 +22,10 @@ $color2: #5DADE2;
       flex-direction: column;
       align-items: center;
       justify-content: start;
+      flex-wrap: wrap;
 
 
+      min-width: 25%;
       height: 100%;
       padding: 1em;
       margin: 1em;
@@ -35,7 +38,7 @@ $color2: #5DADE2;
         display: flex;
         flex-direction: column;
 
-
+        width: 90%;
         margin: 0;
         padding: 0;
 
@@ -52,8 +55,14 @@ $color2: #5DADE2;
           transition-duration: 0.33s;
 
 
+
+
           &:hover {
             background-color: #dcdede;
+          }
+
+          &:active {
+            background-color: #d0d2d2;
           }
 
           a {
@@ -65,7 +74,17 @@ $color2: #5DADE2;
             color: #DC7633;
 
             p {
-              font-size: 55%;
+
+                font-size: 55%;
+            }
+            .Tulossa {
+              font-size:80%;
+              color: #28B463;
+            }
+
+            .Menossa {
+              font-size: 80%;
+              color: #3498DB;
             }
           }
         }
@@ -73,8 +92,17 @@ $color2: #5DADE2;
     }
   }
 
-  .otsikko {
-    padding: 1em;
+
+}
+
+@media screen and (max-width: 699px){
+  :host {
+    width: 100%;
+  }
+
+  .pysakki{
+    width: 100%;
     margin: 0;
+
   }
 }

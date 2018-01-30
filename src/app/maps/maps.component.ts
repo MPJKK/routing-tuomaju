@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DigitransitService} from '../services/digitransit.service';
 
 @Component({
   selector: 'app-maps',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public digitransitService: DigitransitService) { }
 
   ngOnInit() {
   }

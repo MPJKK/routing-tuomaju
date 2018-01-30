@@ -12,12 +12,15 @@
     width: 100%;
 
     margin: 0;
-    padding: 0;
+    padding: 0.6em 0;
 
     background-color: #DC7633;
     color:#F4F6F6;
 
-    border-radius: 0 0 4px 4px;
+
+    h1 {
+      padding-bottom: 0.2em;
+    }
 
     ul {
       display: flex;
@@ -28,18 +31,27 @@
       list-style: none;
 
       li {
-        margin: 0 1em 1em 1em;
+        margin: 0 0 1em 0;
 
-        border-bottom: ridge 4px transparent;
-        transition-duration: 0.15s;
 
-        &:hover {
-          border-bottom: dotted 4px #F4F6F6;
-        }
+
 
         a {
+          padding: 0.5em 1em;
+          margin: 2px;
+
           text-decoration: none;
           color:#F4F6F6;
+
+          background-color: rgba(131,131,131,0);
+          border-radius: 0;
+          transition-duration: 0.33s;
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.17);
+            border-radius: 4px;
+          }
+          &:active {
+            background-color: rgba(255, 255, 255, 0.25);          }
         }
       }
     }
